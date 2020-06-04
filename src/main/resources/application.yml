@@ -9,3 +9,19 @@ spring:
   redis:
     host: 47.113.105.173
     port: 6379
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: not_empty
+      #ÍÕ·åÏÂ»®Ïß×ª»»
+      column-underline: true
+      #Âß¼­É¾³ıÅäÖÃ
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+      db-type: mysql
+    refresh: false
+  mapper-locations: classpath:mapper
+  type-aliases-package: yqw.cn.hotbedoflove.entity
+  configuration:
+    map-underscore-to-camel-case: true
