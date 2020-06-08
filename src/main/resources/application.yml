@@ -4,7 +4,7 @@ spring:
   datasource:
     username: root
     password: root
-    driver: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://47.113.105.173:3306
   redis:
     host: 47.113.105.173
@@ -14,14 +14,13 @@ mybatis-plus:
     db-config:
       id-type: auto
       field-strategy: not_empty
-      #ÍÕ·åÏÂ»®Ïß×ª»»
+      #é©¼å³°ä¸‹åˆ’çº¿è½¬æ¢
       column-underline: true
-      #Âß¼­É¾³ıÅäÖÃ
+      #é€»è¾‘åˆ é™¤é…ç½®
       logic-delete-value: 0
       logic-not-delete-value: 1
       db-type: mysql
     refresh: false
-  mapper-locations: classpath:mapper
-  type-aliases-package: yqw.cn.hotbedoflove.entity
   configuration:
     map-underscore-to-camel-case: true
+    cache-enabled: false
